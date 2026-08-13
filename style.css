@@ -37,6 +37,7 @@
 html {
   scroll-behavior: smooth;      /* smooth scrolling */
   scroll-padding-top: 60px;     /* offset for fixed navbar */
+  overflow-x: clip;             /* kill any horizontal scroll (keeps sticky navbar working) */
 }
 
 body {
@@ -1393,7 +1394,7 @@ body::after  { background: var(--neon);   bottom: -160px; right: -120px; }
   /* Slide-in mobile nav + hamburger from tablet down (8 links get cramped) */
   .nav-links {
     position: fixed;
-    top: 0; right: -100%;
+    top: 0; right: 0;
     height: 100vh;
     width: min(80%, 320px);
     flex-direction: column;
@@ -1403,10 +1404,11 @@ body::after  { background: var(--neon);   bottom: -160px; right: -120px; }
     background: rgba(11,10,20,0.98);
     backdrop-filter: blur(16px);
     border-left: 1px solid rgba(255,255,255,0.08);
-    transition: right var(--transition);
+    transform: translateX(100%);          /* hidden off-screen without adding page width */
+    transition: transform var(--transition);
     z-index: 1050;
   }
-  .nav-links.open { right: 0; }
+  .nav-links.open { transform: translateX(0); }
   .nav-links a { font-size: 1.1rem; }
   .hamburger { display: flex; }
 }
@@ -1414,6 +1416,9 @@ body::after  { background: var(--neon);   bottom: -160px; right: -120px; }
 /* Mobile */
 @media (max-width: 768px) {
   .section { padding: 70px 0; }
+
+  /* Ambient glow blobs can bleed past the edge on small screens — hide them */
+  body::before, body::after { display: none; }
 
   .cards-grid { grid-template-columns: 1fr; }
   .terms-grid { grid-template-columns: 1fr; }
