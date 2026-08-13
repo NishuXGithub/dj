@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="DJ BEATS - Premium DJ & event booking. Weddings, parties, corporate events, club nights & live concerts with world-class sound and lighting." />
+  <title>DJ BEATS | Premium DJ & Event Booking</title>
+
+  <!-- Google Font: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ TOP BAR ============ -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <span><i class="fa-solid fa-phone"></i> +91 98765 43210</span>
+        <span><i class="fa-solid fa-envelope"></i> hello@djbeats.com</span>
+      </div>
+      <div class="topbar-right">
+        <span><i class="fa-solid fa-location-dot"></i> Mumbai • Available Worldwide</span>
+        <div class="topbar-social">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="logo">
+        <i class="fa-solid fa-headphones-simple"></i>
+        DJ <span>BEATS</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#why">Why Choose Us</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#terms">Terms</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="#contact" class="btn btn-primary nav-cta">
+        <i class="fa-solid fa-calendar-check"></i> Book Now
+      </a>
+
+      <!-- Mobile hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ HERO / HOME ============ -->
+  <section class="hero" id="home">
+    <!-- Rotating background photos (slider) -->
+    <div class="hero-slides">
+      <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=1600&q=80')"></div>
+      <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1600&q=80')"></div>
+      <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=1600&q=80')"></div>
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+      <p class="hero-tag" data-fade>🎧 Premium DJ &amp; Event Experience</p>
+
+      <h1 class="hero-title" data-fade>
+        <span id="heroText">Feel The Beat</span>
+      </h1>
+
+      <p class="hero-subtitle" data-fade>
+        World-class sound, electrifying lights &amp; non-stop energy —
+        making every night unforgettable.
+      </p>
+
+      <div class="hero-btns" data-fade>
+        <a href="#contact" class="btn btn-primary">
+          <i class="fa-solid fa-calendar-check"></i> Book Now
+        </a>
+        <a href="#services" class="btn btn-ghost">
+          <i class="fa-solid fa-compass"></i> Explore
+        </a>
+      </div>
+
+      <!-- Trust row -->
+      <div class="hero-trust" data-fade>
+        <div class="hero-stars">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <span>Rated 4.9/5 by 1,200+ happy clients</span>
+      </div>
+
+      <!-- Slider dots -->
+      <div class="hero-dots" id="heroDots">
+        <button class="dot active" data-slide="0" aria-label="Slide 1"></button>
+        <button class="dot" data-slide="1" aria-label="Slide 2"></button>
+        <button class="dot" data-slide="2" aria-label="Slide 3"></button>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-cue" aria-label="Scroll down">
+      <i class="fa-solid fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section about" id="about">
+    <div class="container">
+
+      <!-- 1. Section header -->
+      <div class="section-head" data-fade>
+        <p class="eyebrow">About Us</p>
+        <h2 class="section-title">Live The <span>Moment</span></h2>
+        <p class="section-sub">
+          Premium DJ &amp; event experiences — electrifying sound, lights &amp; energy.
+        </p>
+      </div>
+
+      <!-- 2. Two-column content -->
+      <div class="about-grid">
+        <!-- Left: image with glowing border -->
+        <div class="about-img" data-fade>
+          <span class="img-tag"><span class="live-dot"></span> Live On Stage</span>
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80"
+               alt="DJ performing live on stage" loading="lazy" />
+          <div class="about-badge">
+            <strong>5+</strong>
+            <span>Years Experience</span>
+          </div>
+        </div>
+
+        <!-- Right: content + checklist + CTA -->
+        <div class="about-text" data-fade>
+          <h3 class="about-subhead">Who We Are</h3>
+          <p>
+            We are a collective of passionate DJs, sound engineers and lighting
+            artists who live for the moment the beat drops and the crowd erupts.
+            From intimate weddings to sold-out club nights, we turn ordinary
+            gatherings into experiences people never forget.
+          </p>
+          <p>
+            Every event is treated like our own — carefully curated playlists,
+            crystal-clear audio and immersive visuals, all delivered with
+            professionalism and non-stop energy from the first track to the last.
+          </p>
+
+          <ul class="about-check">
+            <li><i class="fa-solid fa-circle-check"></i> 5+ Years of Experience</li>
+            <li><i class="fa-solid fa-circle-check"></i> 500+ Successful Events</li>
+            <li><i class="fa-solid fa-circle-check"></i> Professional Sound &amp; Lighting</li>
+            <li><i class="fa-solid fa-circle-check"></i> Trusted by Hundreds of Clients</li>
+          </ul>
+
+          <a href="#contact" class="btn btn-primary">
+            <i class="fa-solid fa-calendar-check"></i> Book Your Event
+          </a>
+        </div>
+      </div>
+
+      <!-- 3. Mission & Vision -->
+      <div class="mv-grid">
+        <div class="mv-block" data-fade>
+          <div class="mv-icon"><i class="fa-solid fa-bullseye"></i></div>
+          <h3>Our Mission</h3>
+          <p>
+            To deliver flawless, high-energy experiences that keep every dance
+            floor alive — blending premium sound, stunning visuals and a deep
+            understanding of the crowd to make each event unforgettable.
+          </p>
+        </div>
+        <div class="mv-block" data-fade>
+          <div class="mv-icon"><i class="fa-solid fa-eye"></i></div>
+          <h3>Our Vision</h3>
+          <p>
+            To become the most trusted name in event entertainment — setting the
+            standard for premium DJ experiences and turning every celebration
+            into a story worth telling for years to come.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4. Achievement counters -->
+      <div class="achieve-grid">
+        <div class="achieve-card glass" data-fade>
+          <i class="fa-solid fa-calendar-days"></i>
+          <div class="achieve-text">
+            <h3 class="counter" data-target="500">0</h3>
+            <p>Events Completed</p>
+          </div>
+        </div>
+        <div class="achieve-card glass" data-fade>
+          <i class="fa-solid fa-face-smile"></i>
+          <div class="achieve-text">
+            <h3 class="counter" data-target="1000">0</h3>
+            <p>Happy Clients</p>
+          </div>
+        </div>
+        <div class="achieve-card glass" data-fade>
+          <i class="fa-solid fa-clock"></i>
+          <div class="achieve-text">
+            <h3 class="counter" data-target="5">0</h3>
+            <p>Years Experience</p>
+          </div>
+        </div>
+        <div class="achieve-card glass" data-fade>
+          <i class="fa-solid fa-location-dot"></i>
+          <div class="achieve-text">
+            <h3 class="counter" data-target="50">0</h3>
+            <p>Cities Covered</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section-head" data-fade>
+        <p class="eyebrow">What We Offer</p>
+        <h2 class="section-title">Our <span>Services</span></h2>
+        <p class="section-sub">Full-service DJ and event solutions tailored to your occasion.</p>
+      </div>
+
+      <div class="cards-grid">
+        <article class="card" data-fade>
+          <div class="card-icon"><i class="fa-solid fa-ring"></i></div>
+          <h3>Wedding DJ</h3>
+          <p>Elegant, high-energy sets that make your big day unforgettable.</p>
+          <a href="#contact" class="card-link">Book this <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+        <article class="card" data-fade>
+          <div class="card-icon"><i class="fa-solid fa-cake-candles"></i></div>
+          <h3>Birthday Party</h3>
+          <p>Fun, non-stop music that turns any birthday into a blast.</p>
+          <a href="#contact" class="card-link">Book this <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+        <article class="card" data-fade>
+          <div class="card-icon"><i class="fa-solid fa-briefcase"></i></div>
+          <h3>Corporate Events</h3>
+          <p>Polished entertainment for corporate launches, galas and conferences.</p>
+          <a href="#contact" class="card-link">Book this <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+        <article class="card" data-fade>
+          <div class="card-icon"><i class="fa-solid fa-champagne-glasses"></i></div>
+          <h3>Club Events</h3>
+          <p>Peak-hour sets that keep the dance floor packed all night.</p>
+          <a href="#contact" class="card-link">Book this <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+        <article class="card" data-fade>
+          <div class="card-icon"><i class="fa-solid fa-guitar"></i></div>
+          <h3>Live Concerts</h3>
+          <p>Full stage production and DJ support for live performances.</p>
+          <a href="#contact" class="card-link">Book this <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+        <article class="card" data-fade>
+          <div class="card-icon"><i class="fa-solid fa-lightbulb"></i></div>
+          <h3>Sound &amp; Lighting</h3>
+          <p>Premium sound systems and dynamic lighting for any venue.</p>
+          <a href="#contact" class="card-link">Book this <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BLOG ============ -->
+  <section class="section blog" id="blog">
+    <div class="container">
+      <div class="section-head" data-fade>
+        <p class="eyebrow">From The Booth</p>
+        <h2 class="section-title">Latest <span>Blog</span></h2>
+        <p class="section-sub">Tips, stories and behind-the-scenes from our events.</p>
+      </div>
+
+      <div class="blog-grid">
+        <article class="blog-card" data-fade>
+          <div class="blog-img">
+            <img src="https://images.unsplash.com/photo-1547082299-de196ea013d6?auto=format&fit=crop&w=700&q=80" alt="DJ mixing on a turntable" loading="lazy" />
+            <span class="blog-cat">Tips</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span><i class="fa-regular fa-calendar"></i> Aug 05, 2026</span>
+              <span><i class="fa-regular fa-user"></i> DJ Beats</span>
+            </div>
+            <h3>5 Songs That Never Fail to Fill the Dance Floor</h3>
+            <p>The tracks we reach for when the energy dips and the crowd needs a lift.</p>
+            <a href="#" class="blog-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-card" data-fade>
+          <div class="blog-img">
+            <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=700&q=80" alt="Wedding celebration party" loading="lazy" />
+            <span class="blog-cat">Weddings</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span><i class="fa-regular fa-calendar"></i> Jul 22, 2026</span>
+              <span><i class="fa-regular fa-user"></i> DJ Beats</span>
+            </div>
+            <h3>How to Choose the Perfect DJ for Your Wedding</h3>
+            <p>A simple checklist to make sure your big day sounds exactly right.</p>
+            <a href="#" class="blog-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-card" data-fade>
+          <div class="blog-img">
+            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=700&q=80" alt="Club crowd at night" loading="lazy" />
+            <span class="blog-cat">Events</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span><i class="fa-regular fa-calendar"></i> Jul 08, 2026</span>
+              <span><i class="fa-regular fa-user"></i> DJ Beats</span>
+            </div>
+            <h3>Behind the Decks: A Night at a Sold-Out Club</h3>
+            <p>What really goes into keeping a packed room moving until sunrise.</p>
+            <a href="#" class="blog-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY CHOOSE US ============ -->
+  <section class="section why" id="why">
+    <div class="container">
+      <div class="section-head" data-fade>
+        <p class="eyebrow">The DJ BEATS Difference</p>
+        <h2 class="section-title">Why <span>Choose Us</span></h2>
+        <p class="section-sub">We obsess over the details so your night runs perfectly.</p>
+      </div>
+
+      <div class="cards-grid">
+        <article class="feature" data-fade>
+          <i class="fa-solid fa-user-tie"></i>
+          <h3>Professional DJs</h3>
+          <p>Seasoned performers who read the room and never miss a beat.</p>
+        </article>
+
+        <article class="feature" data-fade>
+          <i class="fa-solid fa-volume-high"></i>
+          <h3>Premium Sound</h3>
+          <p>Crystal-clear, powerful audio engineered for any space.</p>
+        </article>
+
+        <article class="feature" data-fade>
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <h3>Lighting Effects</h3>
+          <p>Immersive lighting and visuals that transform your venue.</p>
+        </article>
+
+        <article class="feature" data-fade>
+          <i class="fa-solid fa-tags"></i>
+          <h3>Affordable Pricing</h3>
+          <p>Transparent packages with no hidden fees or surprises.</p>
+        </article>
+
+        <article class="feature" data-fade>
+          <i class="fa-solid fa-clock"></i>
+          <h3>24/7 Support</h3>
+          <p>We're reachable any time before, during and after your event.</p>
+        </article>
+
+        <article class="feature" data-fade>
+          <i class="fa-solid fa-stopwatch"></i>
+          <h3>On-Time Service</h3>
+          <p>Punctual setup and teardown, every single time.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRICING / PACKAGES ============ -->
+  <section class="section pricing" id="pricing">
+    <div class="container">
+      <div class="section-head" data-fade>
+        <p class="eyebrow">Simple, Transparent Pricing</p>
+        <h2 class="section-title">Our <span>Packages</span></h2>
+        <p class="section-sub">Choose the perfect package — or ask us for a custom quote.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <article class="price-card" data-fade>
+          <h3>Starter</h3>
+          <p class="price-desc">Perfect for house parties &amp; small gatherings.</p>
+          <div class="price"><span class="cur">₹</span>14,999<span class="per">/event</span></div>
+          <ul class="price-list">
+            <li><i class="fa-solid fa-check"></i> Up to 4 hours performance</li>
+            <li><i class="fa-solid fa-check"></i> Professional DJ</li>
+            <li><i class="fa-solid fa-check"></i> Basic sound system</li>
+            <li><i class="fa-solid fa-check"></i> Standard lighting</li>
+            <li class="muted"><i class="fa-solid fa-xmark"></i> Custom playlist planning</li>
+            <li class="muted"><i class="fa-solid fa-xmark"></i> Fog &amp; special effects</li>
+          </ul>
+          <a href="#contact" class="btn btn-ghost btn-block">Choose Starter</a>
+        </article>
+
+        <article class="price-card featured" data-fade>
+          <span class="price-badge">Most Popular</span>
+          <h3>Premium</h3>
+          <p class="price-desc">Ideal for weddings &amp; big celebrations.</p>
+          <div class="price"><span class="cur">₹</span>34,999<span class="per">/event</span></div>
+          <ul class="price-list">
+            <li><i class="fa-solid fa-check"></i> Up to 8 hours performance</li>
+            <li><i class="fa-solid fa-check"></i> Professional DJ + MC</li>
+            <li><i class="fa-solid fa-check"></i> Premium sound system</li>
+            <li><i class="fa-solid fa-check"></i> Dynamic lighting rig</li>
+            <li><i class="fa-solid fa-check"></i> Custom playlist planning</li>
+            <li><i class="fa-solid fa-check"></i> Fog &amp; special effects</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-block">Choose Premium</a>
+        </article>
+
+        <article class="price-card" data-fade>
+          <h3>Elite</h3>
+          <p class="price-desc">Full production for concerts &amp; corporates.</p>
+          <div class="price"><span class="cur">₹</span>69,999<span class="per">/event</span></div>
+          <ul class="price-list">
+            <li><i class="fa-solid fa-check"></i> Unlimited performance hours</li>
+            <li><i class="fa-solid fa-check"></i> DJ team + live host</li>
+            <li><i class="fa-solid fa-check"></i> Concert-grade audio</li>
+            <li><i class="fa-solid fa-check"></i> Full stage lighting &amp; LED</li>
+            <li><i class="fa-solid fa-check"></i> Custom show production</li>
+            <li><i class="fa-solid fa-check"></i> Dedicated event manager</li>
+          </ul>
+          <a href="#contact" class="btn btn-ghost btn-block">Choose Elite</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="section testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-head" data-fade>
+        <p class="eyebrow">Loved By Clients</p>
+        <h2 class="section-title">What People <span>Say</span></h2>
+        <p class="section-sub">Real words from real events we've had the honour to play.</p>
+      </div>
+
+      <div class="testi-grid">
+        <blockquote class="testi glass" data-fade>
+          <i class="fa-solid fa-quote-left quote-mark"></i>
+          <p>"DJ BEATS turned our wedding into the party of the decade. The floor was packed till 3 AM — absolutely worth every rupee!"</p>
+          <div class="testi-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <footer class="testi-author">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ananya Sharma" loading="lazy" />
+            <div>
+              <strong>Ananya Sharma</strong>
+              <span>Wedding, Udaipur</span>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testi glass" data-fade>
+          <i class="fa-solid fa-quote-left quote-mark"></i>
+          <p>"We hired them for our product launch and the energy was unreal. Professional, punctual, and the sound quality was flawless."</p>
+          <div class="testi-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <footer class="testi-author">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rohan Mehta" loading="lazy" />
+            <div>
+              <strong>Rohan Mehta</strong>
+              <span>Corporate Event, Mumbai</span>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testi glass" data-fade>
+          <i class="fa-solid fa-quote-left quote-mark"></i>
+          <p>"Best DJ experience ever. They read the crowd perfectly and kept switching genres at exactly the right moments. 10/10!"</p>
+          <div class="testi-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <footer class="testi-author">
+            <img src="https://randomuser.me/api/portraits/men/68.jpg" alt="Karan Verma" loading="lazy" />
+            <div>
+              <strong>Karan Verma</strong>
+              <span>Birthday Bash, Goa</span>
+            </div>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA BANNER ============ -->
+  <section class="cta-banner">
+    <div class="container cta-inner" data-fade>
+      <div>
+        <h2>Ready to make your night legendary?</h2>
+        <p>Let's turn your event into a story people talk about for years.</p>
+      </div>
+      <a href="#contact" class="btn btn-light">
+        <i class="fa-solid fa-calendar-check"></i> Book Your Date
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ TERMS & CONDITIONS ============ -->
+  <section class="section terms" id="terms">
+    <div class="container">
+      <div class="section-head" data-fade>
+        <p class="eyebrow">The Fine Print</p>
+        <h2 class="section-title">Terms &amp; <span>Conditions</span></h2>
+        <p class="section-sub">Clear policies so we're on the same beat from day one.</p>
+      </div>
+
+      <div class="terms-grid">
+        <div class="terms-item" data-fade>
+          <h3><i class="fa-solid fa-calendar-check"></i> Booking Policy</h3>
+          <p>
+            All bookings are confirmed only after receiving a signed agreement
+            and the required deposit. Dates are reserved on a first-come,
+            first-served basis and cannot be held without a deposit.
+          </p>
+        </div>
+
+        <div class="terms-item" data-fade>
+          <h3><i class="fa-solid fa-ban"></i> Cancellation Policy</h3>
+          <p>
+            Cancellations made 30+ days before the event are eligible for a
+            partial refund of the deposit. Cancellations within 14 days of the
+            event are non-refundable due to reserved scheduling.
+          </p>
+        </div>
+
+        <div class="terms-item" data-fade>
+          <h3><i class="fa-solid fa-credit-card"></i> Payment Terms</h3>
+          <p>
+            A 40% deposit secures your date, with the remaining balance due 7
+            days before the event. We accept bank transfer, card and UPI. Late
+            payments may affect event scheduling.
+          </p>
+        </div>
+
+        <div class="terms-item" data-fade>
+          <h3><i class="fa-solid fa-boxes-packing"></i> Equipment Responsibility</h3>
+          <p>
+            All equipment remains the property of DJ BEATS. The client is
+            responsible for any damage caused by guests. A safe, covered and
+            powered performance area must be provided.
+          </p>
+        </div>
+
+        <div class="terms-item" data-fade>
+          <h3><i class="fa-solid fa-user-shield"></i> Privacy Statement</h3>
+          <p>
+            Any personal details shared with us are used solely for event
+            coordination and are never sold or shared with third parties. Event
+            media may be used for promotion only with your consent.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-head" data-fade>
+        <p class="eyebrow">Get In Touch</p>
+        <h2 class="section-title">Book Your <span>Event</span></h2>
+        <p class="section-sub">Tell us about your event and we'll make it legendary.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact form -->
+        <form class="contact-form glass" id="contactForm" novalidate data-fade>
+          <h3 class="form-title">Send Us A Message</h3>
+          <p class="form-note">Fill in the details and we'll get back within 24 hours.</p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <div class="input-wrap">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" id="name" name="name" placeholder="Your name" />
+              </div>
+              <small class="error" data-error-for="name"></small>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <div class="input-wrap">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" id="email" name="email" placeholder="you@email.com" />
+              </div>
+              <small class="error" data-error-for="email"></small>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <div class="input-wrap">
+              <i class="fa-solid fa-phone"></i>
+              <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" />
+            </div>
+            <small class="error" data-error-for="phone"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="event">Event Type</label>
+            <div class="input-wrap">
+              <i class="fa-solid fa-star"></i>
+              <select id="event" name="event">
+                <option value="">Select event type</option>
+                <option>Wedding</option>
+                <option>Birthday Party</option>
+                <option>Corporate Event</option>
+                <option>Club Night</option>
+                <option>Live Concert</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <div class="input-wrap textarea-wrap">
+              <i class="fa-solid fa-comment-dots"></i>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us about your event..."></textarea>
+            </div>
+            <small class="error" data-error-for="message"></small>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">
+            <i class="fa-solid fa-paper-plane"></i> Send Message
+          </button>
+
+          <p class="form-success" id="formSuccess">
+            <i class="fa-solid fa-circle-check"></i> Thanks! Your message has been sent.
+          </p>
+        </form>
+
+        <!-- Contact info -->
+        <div class="contact-info" data-fade>
+          <div class="info-item glass">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <h4>Address</h4>
+              <p>221 Neon Street, Nightlife District, Mumbai, India</p>
+            </div>
+          </div>
+          <div class="info-item glass">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <h4>Phone</h4>
+              <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+            </div>
+          </div>
+          <div class="info-item glass">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <p><a href="mailto:hello@djbeats.com">hello@djbeats.com</a></p>
+            </div>
+          </div>
+          <div class="info-item glass">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <h4>Working Hours</h4>
+              <p>Mon – Sun: Available 24/7 for bookings</p>
+            </div>
+          </div>
+
+          <div class="social social-info">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="#home" class="logo">
+          <i class="fa-solid fa-headphones-simple"></i>
+          DJ <span>BEATS</span>
+        </a>
+        <p class="footer-about">
+          Premium DJ and event entertainment for unforgettable nights.
+          Book us and feel the beat.
+        </p>
+        <div class="social">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#terms">Terms &amp; Conditions</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Wedding DJ</a></li>
+          <li><a href="#services">Birthday Party</a></li>
+          <li><a href="#services">Corporate Events</a></li>
+          <li><a href="#services">Club Events</a></li>
+          <li><a href="#services">Sound &amp; Lighting</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p class="footer-about">Get event tips &amp; exclusive offers in your inbox.</p>
+        <form class="newsletter" id="newsletter">
+          <input type="email" placeholder="Your email" aria-label="Email for newsletter" />
+          <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+        <ul class="footer-contact">
+          <li><i class="fa-solid fa-phone"></i> +91 98765 43210</li>
+          <li><i class="fa-solid fa-envelope"></i> hello@djbeats.com</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> DJ BEATS. All rights reserved. Designed with <i class="fa-solid fa-heart"></i> for the night.</p>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <button class="to-top" id="toTop" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Lightbox for gallery -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <img src="" alt="Gallery preview" id="lightboxImg" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
