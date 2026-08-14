@@ -629,15 +629,15 @@ body::after  { background: var(--neon);   bottom: -160px; right: -120px; }
 }
 
 /* Left: image with glowing border */
-.about-img { position: relative; min-height: 100%; }
+.about-img { position: relative; align-self: start; }
 .about-img img {
   width: 100%;
-  height: 100%;                /* fill the column — no extra top/bottom gap */
-  min-height: 420px;
-  object-fit: cover;
+  height: auto;                /* show the full shop photo — no cropping */
+  object-fit: contain;
   border-radius: var(--radius);
   position: relative;
   z-index: 1;
+  display: block;
 }
 /* Subtle dark gradient + "Live" tag overlay for a premium look */
 .about-img .img-tag {
@@ -1786,7 +1786,7 @@ body::after  { background: var(--neon);   bottom: -160px; right: -120px; }
   .blog-grid { grid-template-columns: repeat(2, 1fr); }
   .about-grid { grid-template-columns: 1fr; gap: 48px; }
   .about-img { max-width: 460px; margin: 0 auto; min-height: auto; }
-  .about-img img { height: auto; aspect-ratio: 4 / 5; min-height: 0; }
+  .about-img img { height: auto; min-height: 0; }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
   .contact-grid { grid-template-columns: 1fr; }
   .achieve-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
