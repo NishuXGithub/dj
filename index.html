@@ -6,6 +6,15 @@
   <meta name="description" content="Fine Arts DJ Amplifier - Trusted DJ amplifiers, speakers, subwoofers, mixers, stage lighting, audio accessories, sales, repair & sound system setup in New Usmanpur, Delhi since 1994." />
   <title>Fine Arts DJ Amplifier | Premium DJ Sound & Amplifiers · Delhi</title>
 
+  <!-- Always open at the top of the Home page on refresh (runs before render to avoid an anchor jump) -->
+  <script>
+    if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+    // Strip any #section from the URL on initial load so the browser can't jump to it.
+    if (window.location.hash) {
+      history.replaceState(null, "", window.location.pathname + window.location.search);
+    }
+  </script>
+
   <!-- Google Font: Poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

@@ -8,6 +8,10 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
+  /* -------- Always start at the top of the Home page on load/refresh -------- */
+  if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+  window.scrollTo(0, 0);
+
   /* -------- Element references -------- */
   const navbar    = document.getElementById("navbar");
   const hamburger = document.getElementById("hamburger");
