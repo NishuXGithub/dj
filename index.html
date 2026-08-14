@@ -659,6 +659,9 @@
           <h3 class="form-title">Request a Quote</h3>
           <p class="form-note">Fill in the details and we'll get back within 24 hours.</p>
 
+          <!-- Anti-spam honeypot: hidden from users, bots tend to fill it -->
+          <input type="text" name="company" id="company" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
           <div class="form-row">
             <div class="form-group">
               <label for="name">Name</label>

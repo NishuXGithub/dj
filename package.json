@@ -1,0 +1,10 @@
+{
+  "name": "fine-arts-dj-amplifier",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Fine Arts DJ Amplifier website with a serverless contact-enquiry email API.",
+  "dependencies": {
+    "resend": "^4.0.0"
+  }
+}

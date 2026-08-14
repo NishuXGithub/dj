@@ -217,53 +217,107 @@ document.addEventListener("DOMContentLoaded", () => {
   function setError(field, message) {
     const input = form.querySelector(`#${field}`);
     const small = form.querySelector(`[data-error-for="${field}"]`);
-    input.classList.add("invalid");
-    small.textContent = message;
+    if (input) input.classList.add("invalid");
+    if (small) small.textContent = message;
   }
   // Helper: clear an error
   function clearError(field) {
     const input = form.querySelector(`#${field}`);
     const small = form.querySelector(`[data-error-for="${field}"]`);
-    input.classList.remove("invalid");
-    small.textContent = "";
+    if (input) input.classList.remove("invalid");
+    if (small) small.textContent = "";
   }
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    formSuccess.classList.remove("show");
+  const submitBtn     = form.querySelector('button[type="submit"]');
+  const submitBtnHTML = submitBtn ? submitBtn.innerHTML : "";
+  let   isSending     = false;
 
+  // Validation patterns
+  const emailRe       = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  // Indian mobile: optional +91/91, then 10 digits starting 6-9
+  const indianPhoneRe = /^(?:\+?91)?[6-9]\d{9}$/;
+
+  // Show a success / error status message under the form
+  function setStatus(msg, type) {
+    const icon = type === "error"
+      ? '<i class="fa-solid fa-circle-exclamation"></i> '
+      : '<i class="fa-solid fa-circle-check"></i> ';
+    formSuccess.innerHTML = icon + msg;
+    formSuccess.classList.toggle("error", type === "error");
+    formSuccess.classList.add("show");
+  }
+
+  function validateForm() {
     const name    = form.name.value.trim();
     const email   = form.email.value.trim();
-    const phone   = form.phone.value.trim();
+    const phone   = form.phone.value.trim().replace(/[\s-]/g, "");
     const message = form.message.value.trim();
     let valid = true;
 
-    // Regex patterns
-    const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const phoneRe = /^[+]?[\d\s-]{7,15}$/;
-
-    // Name
     if (name.length < 2) { setError("name", "Please enter your name."); valid = false; }
     else clearError("name");
 
-    // Email
     if (!emailRe.test(email)) { setError("email", "Enter a valid email address."); valid = false; }
     else clearError("email");
 
-    // Phone
-    if (!phoneRe.test(phone)) { setError("phone", "Enter a valid phone number."); valid = false; }
+    if (!indianPhoneRe.test(phone)) { setError("phone", "Enter a valid 10-digit Indian phone number."); valid = false; }
     else clearError("phone");
 
-    // Message
-    if (message.length < 10) { setError("message", "Message must be at least 10 characters."); valid = false; }
+    if (message.length < 5) { setError("message", "Please enter a short message."); valid = false; }
     else clearError("message");
 
-    // On success
-    if (valid) {
-      form.reset();
-      formSuccess.classList.add("show");
-      // Auto-hide the success message after a few seconds
-      setTimeout(() => formSuccess.classList.remove("show"), 5000);
+    return valid;
+  }
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    if (isSending) return;                 // prevent duplicate submissions
+    formSuccess.classList.remove("show");
+    if (!validateForm()) return;
+
+    // Enter "sending" state
+    isSending = true;
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+    }
+
+    const payload = {
+      name:    form.name.value.trim(),
+      email:   form.email.value.trim(),
+      phone:   form.phone.value.trim(),
+      service: form.event.value.trim(),
+      message: form.message.value.trim(),
+      company: form.company ? form.company.value : "",   // honeypot
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      let data = {};
+      try { data = await res.json(); } catch (_) { /* ignore non-JSON */ }
+
+      if (res.ok && data.ok) {
+        form.reset();
+        form.querySelectorAll(".invalid").forEach((el) => el.classList.remove("invalid"));
+        setStatus("Thank you! Your enquiry has been submitted successfully. Our team will contact you shortly.", "success");
+        setTimeout(() => formSuccess.classList.remove("show"), 8000);
+      } else {
+        setStatus("Sorry, we couldn't send your enquiry. Please try again or call us at +91 95823 42726.", "error");
+      }
+    } catch (err) {
+      setStatus("Network error — please check your connection and try again, or call +91 95823 42726.", "error");
+    } finally {
+      // Always leave the sending state so the user can retry
+      isSending = false;
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = submitBtnHTML;
+      }
     }
   });
 

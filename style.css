@@ -1415,6 +1415,19 @@ body::after  { background: var(--neon);   bottom: -160px; right: -120px; }
   font-weight: 500;
 }
 .form-success.show { display: block; animation: fadeSwap 0.4s ease; }
+.form-success.error { color: #ff7a8f; }
+
+/* Honeypot anti-spam field — hidden from real users */
+.hp-field {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px; height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Disabled submit button while sending */
+.btn:disabled { opacity: 0.7; cursor: not-allowed; }
 
 /* Contact info */
 .contact-info { display: grid; gap: 18px; }
