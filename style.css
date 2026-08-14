@@ -1187,6 +1187,15 @@ body::after  { background: var(--neon);   bottom: -160px; right: -120px; }
 }
 .price .cur { font-size: 1.3rem; vertical-align: super; margin-right: 2px; }
 .price .per { font-size: 0.9rem; font-weight: 400; color: var(--light-gray); }
+/* "Contact for Price" — quote instead of a fixed number */
+.price.price-quote {
+  font-size: 1.4rem;
+  font-weight: 700;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .price-list { display: grid; gap: 14px; margin-bottom: 28px; flex: 1; }
 .price-list li {
   display: flex; align-items: center; gap: 12px;
@@ -1203,6 +1212,39 @@ body::after  { background: var(--neon);   bottom: -160px; right: -120px; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 26px;
+}
+
+/* ---------- Trust band (replaces named testimonials) ---------- */
+.trust-band {
+  border-radius: var(--radius);
+  padding: 40px 34px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.trust-stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px 60px;
+  margin-bottom: 26px;
+}
+.trust-item { display: flex; flex-direction: column; gap: 4px; }
+.trust-num {
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.trust-label { font-size: 0.8rem; color: var(--light-gray); letter-spacing: 0.5px; }
+.trust-note {
+  max-width: 680px;
+  margin: 0 auto;
+  color: var(--light-gray);
+  font-size: 0.95rem;
+  line-height: 1.8;
 }
 .testi {
   padding: 34px 30px;
