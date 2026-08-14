@@ -59,7 +59,8 @@ export default async function handler(req, res) {
 
   // Configuration check
   const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.TO_EMAIL;
+  // Enquiry destination. Defaults to a testing inbox; override with TO_EMAIL in production.
+  const to = process.env.TO_EMAIL || "nishukashyap@gmail.com";
   const from = process.env.FROM_EMAIL || "Fine Arts DJ Amplifier <onboarding@resend.dev>";
   if (!apiKey || !to) {
     console.error("Email not configured: missing RESEND_API_KEY or TO_EMAIL");
