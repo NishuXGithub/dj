@@ -122,6 +122,13 @@ body::after  { background: var(--neon);   bottom: -160px; right: -120px; }
 .why .section-head { margin-bottom: 16px; }
 .expertise   { background: var(--dark); padding-top: 30px; }
 .how         { background: var(--black); padding-top: 30px; }
+/* Match the heading size used across the other sections */
+.products .section-title,
+.expertise .section-title,
+.how .section-title {
+  font-size: clamp(1.4rem, 2vw + 0.8rem, 2.4rem);
+  font-weight: 600;
+}
 .pricing     { background: var(--dark); padding-top: 30px; }
 /* Same header style as About: full-gradient heading + light subheading */
 .pricing .section-title {
