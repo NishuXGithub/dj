@@ -1,5 +1,5 @@
 /* =========================================================
-   DJ BEATS — script.js
+   Fine Arts DJ Amplifier — script.js
    Handles: sticky navbar, hamburger menu, active link
    highlight, scroll-to-top, fade-in on scroll, hero slider,
    animated counters, gallery lightbox, contact & newsletter
@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     navbar.classList.toggle("scrolled", window.scrollY > 40);
     // Reveal the scroll-to-top button after 400px
     toTop.classList.toggle("show", window.scrollY > 400);
+    // Highlight the nav link for the section currently in view
     highlightActiveLink();
   }
   window.addEventListener("scroll", onScroll);
@@ -106,6 +107,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const counters = document.querySelectorAll(".counter");
 
   function animateCounter(el) {
+    if (el.dataset.animated) return;   // run only once
+    el.dataset.animated = "1";
     const target = +el.dataset.target;
     const duration = 1800;          // total animation time (ms)
     const start = performance.now();
@@ -138,7 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const heroText   = document.getElementById("heroText");
   const heroSlides = document.querySelectorAll(".hero-slide");
   const dots       = document.querySelectorAll(".hero-dots .dot");
-  const phrases    = ["Feel The Beat", "Own The Night", "Drop The Bass"];
+  const phrases    = ["Feel The Power", "Genuine Gear", "Trusted Since 1994"];
   let slideIndex   = 0;
   let slideTimer;
 
@@ -289,6 +292,6 @@ document.addEventListener("DOMContentLoaded", () => {
      ======================================================= */
   document.getElementById("year").textContent = new Date().getFullYear();
 
-  // Run once on load so the correct link is highlighted
+  // Run once on load to set navbar / scroll-to-top state + active link
   onScroll();
 });
