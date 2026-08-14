@@ -307,7 +307,9 @@ document.addEventListener("DOMContentLoaded", () => {
         setStatus("Thank you! Your enquiry has been submitted successfully. Our team will contact you shortly.", "success");
         setTimeout(() => formSuccess.classList.remove("show"), 8000);
       } else {
-        setStatus("Sorry, we couldn't send your enquiry. Please try again or call us at +91 95823 42726.", "error");
+        if (data && data.detail) console.error("Enquiry error:", data.detail);
+        const hint = data && data.detail ? " (" + data.detail + ")" : "";
+        setStatus("Sorry, we couldn't send your enquiry." + hint + " Please try again or call us at +91 95823 42726.", "error");
       }
     } catch (err) {
       setStatus("Network error — please check your connection and try again, or call +91 95823 42726.", "error");

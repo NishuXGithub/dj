@@ -63,8 +63,9 @@ export default async function handler(req, res) {
   const to = process.env.TO_EMAIL || "nishukashyap@gmail.com";
   const from = process.env.FROM_EMAIL || "Fine Arts DJ Amplifier <onboarding@resend.dev>";
   if (!apiKey || !to) {
-    console.error("Email not configured: missing RESEND_API_KEY or TO_EMAIL");
-    return res.status(500).json({ ok: false, error: "Email service is not configured." });
+    const detail = !apiKey ? "RESEND_API_KEY is missing" : "TO_EMAIL is missing";
+    console.error("Email not configured:", detail);
+    return res.status(500).json({ ok: false, error: "Email service is not configured.", detail });
   }
 
   const submittedAt = new Date().toLocaleString("en-IN", {
@@ -115,11 +116,11 @@ ${submittedAt}`;
 
     if (error) {
       console.error("Resend error:", error);
-      return res.status(502).json({ ok: false, error: "Email service error" });
+      return res.status(502).json({ ok: false, error: "Email service error", detail: error.message || String(error) });
     }
     return res.status(200).json({ ok: true });
   } catch (err) {
     console.error("Send failed:", err);
-    return res.status(500).json({ ok: false, error: "Failed to send enquiry" });
+    return res.status(500).json({ ok: false, error: "Failed to send enquiry", detail: err && err.message ? err.message : String(err) });
   }
 }
