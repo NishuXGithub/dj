@@ -45,7 +45,8 @@ body {
   background: var(--black);
   color: var(--white);
   line-height: 1.65;
-  overflow-x: hidden;
+  overflow-x: clip;             /* not "hidden" — that turns body into a scroll
+                                    container and breaks the sticky navbar */
 }
 
 a { text-decoration: none; color: inherit; }
