@@ -64,7 +64,7 @@ Browser form  →  POST /api/contact  →  Resend  →  Business email
 | Variable | Required | Example |
 |---|---|---|
 | `RESEND_API_KEY` | yes | `re_xxxxxxxx` (from resend.com/api-keys) |
-| `TO_EMAIL` | yes | the Fine Arts business inbox that receives enquiries |
+| `TO_EMAIL` | optional | inbox that receives enquiries — **currently defaults to `nishukashyap@gmail.com` (testing)**; set this to the real Fine Arts inbox in production |
 | `FROM_EMAIL` | optional | `Fine Arts DJ Amplifier <enquiry@yourdomain.com>` (defaults to Resend's `onboarding@resend.dev` for testing) |
 
 > Quick start: with `FROM_EMAIL` unset, Resend's shared sender only delivers to
