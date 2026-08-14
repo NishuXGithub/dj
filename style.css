@@ -120,6 +120,8 @@ body::after  { background: var(--neon);   bottom: -160px; right: -120px; }
   line-height: 1.9;
 }
 .why .section-head { margin-bottom: 16px; }
+.expertise   { background: var(--dark); padding-top: 30px; }
+.how         { background: var(--black); padding-top: 30px; }
 .pricing     { background: var(--dark); padding-top: 30px; }
 /* Same header style as About: full-gradient heading + light subheading */
 .pricing .section-title {
@@ -821,6 +823,7 @@ body::after  { background: var(--neon);   bottom: -160px; right: -120px; }
   line-height: 1;
 }
 .achieve-card h3::after { content: "+"; -webkit-text-fill-color: var(--neon); }
+.achieve-card.no-plus h3::after { content: ""; }
 .achieve-card p {
   color: var(--light-gray);
   margin-top: 4px;
@@ -926,6 +929,76 @@ body::after  { background: var(--neon);   bottom: -160px; right: -120px; }
 }
 .product-card:hover .product-body h3 { color: var(--purple-soft); }
 .product-body p { color: var(--light-gray); font-size: 0.9rem; margin-bottom: 18px; }
+
+/* ---------- Product Expertise ---------- */
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.expertise-card {
+  border-radius: var(--radius);
+  padding: 30px 24px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+.expertise-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(23,230,255,0.5);
+  box-shadow: var(--shadow), 0 0 30px rgba(23,230,255,0.22);
+}
+.expertise-card i {
+  font-size: 2rem;
+  color: var(--neon);
+  margin-bottom: 14px;
+}
+.expertise-card h3 { font-size: 1.02rem; font-weight: 600; margin-bottom: 8px; }
+.expertise-card p { color: var(--light-gray); font-size: 0.86rem; }
+
+/* ---------- How It Works (steps) ---------- */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.step {
+  position: relative;
+  background: var(--dark-2);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius);
+  padding: 40px 24px 28px;
+  text-align: center;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+.step:hover {
+  transform: translateY(-8px);
+  border-color: rgba(139,47,255,0.5);
+  box-shadow: var(--shadow), var(--shadow-glow);
+}
+.step-num {
+  position: absolute;
+  top: -18px; left: 50%;
+  transform: translateX(-50%);
+  width: 40px; height: 40px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: var(--grad);
+  color: #fff;
+  font-weight: 800;
+  font-size: 1rem;
+  box-shadow: var(--shadow-glow);
+}
+.step i {
+  font-size: 1.9rem;
+  color: var(--neon);
+  margin-bottom: 12px;
+}
+.step h3 { font-size: 1.02rem; font-weight: 600; margin-bottom: 8px; }
+.step p { color: var(--light-gray); font-size: 0.86rem; }
+
+/* CTA banner — dual action buttons */
+.cta-actions { display: flex; gap: 14px; flex-wrap: wrap; }
 
 /* Feature card (Why Choose Us) */
 .feature {
@@ -1646,6 +1719,8 @@ body::after  { background: var(--neon);   bottom: -160px; right: -120px; }
 @media (max-width: 992px) {
   .cards-grid { grid-template-columns: repeat(2, 1fr); }
   .products-grid { grid-template-columns: repeat(2, 1fr); }
+  .expertise-grid { grid-template-columns: repeat(2, 1fr); }
+  .steps-grid { grid-template-columns: repeat(2, 1fr); gap: 30px 24px; }
   .blog-grid { grid-template-columns: repeat(2, 1fr); }
   .about-grid { grid-template-columns: 1fr; gap: 48px; }
   .about-img { max-width: 460px; margin: 0 auto; min-height: auto; }
@@ -1691,6 +1766,8 @@ body::after  { background: var(--neon);   bottom: -160px; right: -120px; }
 
   .cards-grid { grid-template-columns: 1fr; }
   .products-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+  .expertise-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+  .steps-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; gap: 34px; }
   .terms-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
   .mv-grid { grid-template-columns: 1fr; gap: 44px; }
@@ -1701,6 +1778,7 @@ body::after  { background: var(--neon);   bottom: -160px; right: -120px; }
   .hero-btns .btn { width: 100%; max-width: 280px; justify-content: center; }
 
   .cta-inner { flex-direction: column; text-align: center; }
+  .cta-actions { justify-content: center; }
 }
 
 /* Small mobile */
